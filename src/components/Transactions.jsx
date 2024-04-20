@@ -127,12 +127,12 @@ const Transactions = () => {
   };
 
   return (
-    <div className='bg-black w-11/12 rounded-xl'>
+    <div className='bg w-11/12 rounded-xl'>
       <Tabs className='text-white' value={tabValue} onChange={handleChangeTab} aria-label="transaction tabs">
         <Tab label="Successful" className='text-white '/>
         <Tab label="Reverted" className='text-white '/>
       </Tabs>
-      <TableContainer component={Paper} className='bg-black '>
+      <TableContainer component={Paper} className='bg '>
         <Table>
           <TableHead >
             <TableRow className="text-white">

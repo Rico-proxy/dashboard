@@ -59,8 +59,8 @@ const Card = () => {
   };
 
   return (
-    <div className="bg-black p-4">
-        <div  style={{ height: '370px', width: '250px' }}>
+    <div className="bg p-4">
+        <div  style={{ height: '370px', width: '300px' }}>
         <Bar data={data} options={options} />
          </div>
     </div>

@@ -31,6 +31,24 @@ const RecentTransaction = () => {
       avatar: '/path-to-avatar1.jpg', // replace with your image path
       statusColor: 'yellow',
     },
+    {
+      name: 'Livia Bator',
+      date: 'June 5, 2020, 08:22 AM',
+      amount: '+$5,553',
+      card: 'MasterCard 404',
+      status: 'Pending',
+      avatar: '/path-to-avatar1.jpg', // replace with your image path
+      statusColor: 'yellow',
+    },
+    {
+      name: 'Livia Bator',
+      date: 'June 5, 2020, 08:22 AM',
+      amount: '+$5,553',
+      card: 'MasterCard 404',
+      status: 'Pending',
+      avatar: '/path-to-avatar1.jpg', // replace with your image path
+      statusColor: 'yellow',
+    },
     // ... other transactions
   ];
 
@@ -41,7 +59,7 @@ const RecentTransaction = () => {
   };
 
   return (
-    <div className="bg w-[800px] recent bg-transparent text-white p-6 rounded-lg shadow-md ">
+    <div className="bg w-[800px] recent  text-white p-6 rounded-lg shadow-md ">
       <h2 className="text-2xl font-semibold mb-4">Latest Transaction</h2>
       <p className="mb-6">Lorem ipsum dolor sit amet, consectetur</p>
       <ul>

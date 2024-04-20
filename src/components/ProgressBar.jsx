@@ -17,8 +17,8 @@ const StyledLinearProgress = styled(LinearProgress)(({ theme, width }) => ({
 
 const Progress = () => {
   const categories = [
-    { hashtag: 'investment', amount: 89.24, percentage: 30 },
-    { hashtag: 'transfer', amount: 441.45, percentage: 60 },
+    { hashtag: 'investment', amount: 89.24, percentage: 70 },
+    { hashtag: 'transfer', amount: 441.45, percentage: 10 },
   ];
 
   const tags = [

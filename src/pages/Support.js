@@ -14,12 +14,9 @@ import ProgressBar from '../components/ProgressBar';
 import Slide from '../components/Slide';
 import axios from 'axios';
 import Time from '../components/Time';
-import WalletCard from '../components/WalletCard';
-import MainBalance from '../components/MainBalance';
-import Three from '../components/Three';
-import PiChart from '../components/PiChart';
-import WeeklySummary from '../components/WeeklySummary';
-const Balance = () => {
+import Transactions from '../components/Transactions';
+import SupportMessage from '../components/SupportMessage';
+const Transaction = () => {
   
   
 
@@ -39,7 +36,7 @@ const Balance = () => {
         {/* Main content goes here */}
         <head className="flex flex-row space-x-6 justify-between py-4 items-center">
             <div className='flex flex-col'>
-                <h1 className="text-[16px] font-semibold text-white">Balance</h1>
+                <h1 className="text-[16px] font-semibold text-white">Transaction Details</h1>
                
             </div>
             <div>
@@ -66,30 +63,9 @@ const Balance = () => {
                 </div>
             </div>
         </head>
-        <div className='pl-6'>
-            <body className='pb-20 grid min-h-screen grid-cols-2 gap-4'>
-                    <div>
-                        <div className='grid grid-cols-2 '>
-                            <div className='w-[40vh]'>
-                                <WalletCard/>
-                            </div>
-                            <div className='w-[60vh] pb-10'>
-                                    <MainBalance/>
-                            </div>
-                            <div style={{ background: 'linear-gradient(160deg, #7b7bea, #0006ff)',}} className='  w-[820px] '>
-                            <Three/>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div className='pl-[300px]'>
-                       <PiChart/>     
-                      </div>
-                    <RecentTransaction/>
-                    <div className='pl-[300px]'>
-                    <WeeklySummary/>
-                    </div>
-                  
+        <div className='pl-20'>
+            <body className='text-black space-y-8 pt-24 pb-20 min-h-screen'>
+                 <SupportMessage/>
             </body>
           <footer className='pr-4  w-full justif-end' >
                 <div className='bg p-3  text-white rounded-tl-xl rounded-tr-xl'>
@@ -105,4 +81,4 @@ const Balance = () => {
   );
 };
 
-export default Balance;
+export default Transaction;

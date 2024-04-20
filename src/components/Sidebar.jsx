@@ -13,13 +13,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   const menus = [
     { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
     { name: "Balance", link: "/balance", icon: AiOutlineUser },
-    { name: "Messages", link: "/messages", icon: FiMessageSquare },
-    { name: "Analytics", link: "/analytics", icon: TbReportAnalytics },
-    { name: "File Manager", link: "/file-manager", icon: FiFolder },
-    { name: "Cart", link: "/cart", icon: FiShoppingCart },
-    { name: "Saved", link: "/saved", icon: AiOutlineHeart },
-    { name: "Setting", link: "/settings", icon: RiSettings4Line },
-    { name: "Setting", link: "/settings", icon: RiSettings4Line },
+    { name: "Transfer History", link: "/transaction", icon: FiMessageSquare },
+    { name: "Profile", link: "/profile", icon: TbReportAnalytics },
+   
   ];
 
   return (
@@ -39,6 +35,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         {isOpen ? <AiOutlineArrowRight size={20} /> : <AiOutlineArrowLeft size={20} />}
       </button>
       <div className="flex flex-col justify-between h-full pt-24">
+        <Link to='/'>
       <img 
           src="/assets/logo.png" 
           alt="Adam Joe" 
@@ -48,6 +45,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             transition: 'width 0.3s'
           }}
         />
+        </Link>
       
         <div>
           {menus.map((menu, index) => (

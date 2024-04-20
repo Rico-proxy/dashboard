@@ -8,7 +8,7 @@ const Circle4 = () => {
       {
         label: 'Progress',
         data: [150, 100], // Assuming the value is 60%
-        backgroundColor: ['blue', '#ffff'], // Primary color and transparent for the unfilled part
+        backgroundColor: ['green', '#ffff'], // Primary color and transparent for the unfilled part
         borderColor: ['transparent'], // Hide the border
         cutout: '90%', // Increase the cutout percentage to make the doughnut thinner
         borderWidth: 1,

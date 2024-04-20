@@ -7,10 +7,10 @@ const Circle4 = () => {
     datasets: [
       {
         label: 'Progress',
-        data: [150, 100], // Assuming the value is 38%
-        backgroundColor: ['#7b4efa', 'transparent'], // Primary color and transparent for the unfilled part
+        data: [150, 100], // Assuming the value is 60%
+        backgroundColor: ['red', '#ffff'], // Primary color and transparent for the unfilled part
         borderColor: ['transparent'], // Hide the border
-        cutout: '84%', // Increase the cutout percentage to make the doughnut thinner
+        cutout: '90%', // Increase the cutout percentage to make the doughnut thinner
         borderWidth: 1,
         rotation: 270, // Rotate to start the progress from the top
         circumference: 360, // Complete circle
@@ -33,7 +33,7 @@ const Circle4 = () => {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100px', height: '100px' }}>
+    <div style={{ position: 'relative', width: '50px', height: '50px' }}> {/* Reduced size */}
       <Doughnut data={data} options={options} />
       <div style={{
         position: 'absolute',
@@ -41,9 +41,9 @@ const Circle4 = () => {
         top: '50%',
         transform: 'translate(-50%, -50%)',
         color: 'white',
-        fontSize: '20px',
+        fontSize: '16px', // Reduced font size
       }}>
-        58%
+        
       </div>
     </div>
   );

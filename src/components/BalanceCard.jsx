@@ -57,7 +57,7 @@ const data = {
       label: 'Expense',
       data: [200, 300, 400, 500, 300, 500, 450],
       fill: false,
-      backgroundColor: '#ff0000',
+      backgroundColor: '#ff00',
       borderColor: '#ff0000',
     },
   ],
@@ -65,14 +65,14 @@ const data = {
 
 export default function BalanceSummaryCard() {
   return (
-    <div className="balance-summary-card bg">
+    <div style={{ }} className="balance-summary-card bg">
       <div className="header">
         <h2>Your Balance Summary</h2>
         {/* Insert toggle buttons here */}
       </div>
       <div className="balance-info">
         <div  className="flex flex-row space-x-2 items-center">
-             <div className="bg-black p-3 rounded-2xl text-white">
+             <div className="bg-black p-3 rounded-lg text-white">
                 <BsArrowDownLeft className="hover:animate-bounce"/>
              </div>
             <div className='flex flex-col font-bold'>
@@ -82,7 +82,7 @@ export default function BalanceSummaryCard() {
           
         </div>
         <div className="flex flex-row space-x-2 items-center">
-             <div className="bg-black p-3 rounded-2xl text-white">
+             <div className="bg-black p-3 rounded-lg text-white">
                 <BsArrowDownLeft className="hover:animate-bounce"/>
              </div>
             <div className='flex flex-col font-bold'>
@@ -92,7 +92,7 @@ export default function BalanceSummaryCard() {
           
         </div>
       </div>
-      <Line data={data} options={options} />
+      <Line className='' data={data} options={options} />
     </div>
   );
 }

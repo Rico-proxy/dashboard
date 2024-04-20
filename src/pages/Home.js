@@ -14,6 +14,10 @@ import ProgressBar from '../components/ProgressBar';
 import Slide from '../components/Slide';
 import axios from 'axios';
 import Time from '../components/Time';
+import Status from '../components/Status';
+import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import Slide2 from '../components/Slide2';
 const Home = () => {
   const [userInfo, setUserInfo] = useState({});
 
@@ -57,7 +61,7 @@ const Home = () => {
   return (
     <div style={{ backgroundImage: "url('assets/3.jpg')"}} className={`bg min-h-screen overflow-x-hidden bg-cover Home ${isOpen ? 'pl-20' : 'pl-44'}`}>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className={`content ${isOpen ? '' : 'active-sidebar'}`}>
+      <div  className={`w-full h-full bg-black-600/50 backdrop-brightness-50 content ${isOpen ? '' : 'active-sidebar'}`}>
         {/* Main content goes here */}
         <head className="flex flex-row space-x-6 justify-between py-4 items-center">
             <div className='flex flex-col'>
@@ -71,9 +75,8 @@ const Home = () => {
                 <div className="bg-black p-4 rounded-2xl text-white">
                 <BsBellFill className="hover:animate-bounce"/>
                 </div>
-                <div className="bg-black p-4 rounded-2xl text-white">
-                <TbMessage2Exclamation className="hover:animate-bounce"/>
-                </div>
+                
+                <Status statusType="active" />
                 <div className="dropdown">
                 <button onClick={toggleDropdown} className="dropdown-button rounded-2xl">
                     <RiSettings4Line className="hover:animate-bounce text-2xl"/>
@@ -88,13 +91,27 @@ const Home = () => {
                 </div>
             </div>
         </head>
-        <body className='text-black space-y-8 pt-24 pb-20'>
-          <div className='flex flex-row items-center'>
-            <div>
+        <body className='text-black space-y-3 pt-6 pb-20'>
+        <div className='flex flex-row justify-center'>
+                           <Link to="/transfer" className="flex flex-col items-center p-4 rounded-2xl">
+                                  <div className="p-3 rounded-full bg">
+                                    <AiOutlineArrowUp className="text-white md:text-3xl" />
+                                  </div>
+                                   <p className="text-[19px] md:text-xl font-light text-white">Transfer</p>
+                            </Link>
+                            <Link to="/transfer" className="flex flex-col items-center p-4 rounded-2xl">
+                                  <div className="p-3 rounded-full bg">
+                                    <AiOutlineArrowDown className="text-white md:text-3xl" />
+                                  </div>
+                                   <p className="text-[19px] md:text-xl font-light text-white">Receive</p>
+                            </Link>
+                            </div> 
+          <div className='flex flex-row items-center justify-between'>
+            <div className=''>
               <Time/>
             </div>
             <div>
-             {userInfo.fullName}
+             Ledger Account
             </div>
           </div>
             <div className='flex flex-row space-x-5'>
@@ -106,6 +123,9 @@ const Home = () => {
                 </div>
                 <div><Card/></div>
             </div>
+            <div className='pb-5 pt-5'>
+              <Slide2/>
+            </div>
             <div className='flex flex-row space-x-6'>
                 <div className=' '>
                 <RecentTransaction/>
@@ -116,6 +136,9 @@ const Home = () => {
             </div>
             <div className='px-10'>
               <ProgressBar/>
+            </div>
+            <div>
+              <Slide2/>
             </div>
         </body>
         <footer className='pr-4  ' >
